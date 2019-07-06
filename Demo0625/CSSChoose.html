@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Css选择器</title>
+		<style type="text/css">
+			table{
+				border:1px solid red;/*红色实线,1px边框*/、
+				width: 500px;
+				height: 120px;
+			}
+			tr{
+				background-color:pink;
+				
+			}
+			/*第一行 粉色*/
+			/*第一行 绿色*/
+			/*第一行 黄色*/
+			/*类选择器 class 选择器*/
+			/*语法 。class名 类型选择器*/
+			.tr1{
+				background-color:pink;
+				height:40px ;
+			}
+			.tr2{
+				background-color: greenyellow;
+				height:40px ;
+			}
+			.tr3{
+				background-color: blue;
+				height:40px ;
+			}
+			/*id 选择器 id名*/
+			/*语法*/
+			/*id 是唯一的，不要写相同名字的id*/
+			#tr1_name{
+				font-family: "宋体";
+			}
+			/*普通标签 class id*/
+			
+			
+		</style>
+	</head>
+	<body>
+		<table border="1">
+			<tr class="tr1">
+				<td id="tr1_name">姓名</td>
+				<td id="tr1_age">年龄</td>
+				<td id="tr1_hobby">爱好</td>
+			</tr>
+			<tr class="tr2">
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr class="tr2">
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</body>
+</html>

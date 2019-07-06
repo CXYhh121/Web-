@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*让浏览器页面 支持百分比显示*/
+			html body{
+				width:100%;
+				height: 100%;
+				background-image: url("img/背景图片。jpg");
+				/*只保留一张图片*/
+				background-repeat: no-repeat;
+				background-size: cover;/*完全填充*/
+			}
+			/*CSS中的伪类
+			 * 伪类：根据标签的状态来修改样式
+			 * 样式是否修改，取决于标签处于那种状态下
+			 */
+			/*a:link - 正常，未访问过的链接
+			 * a:visited - 用户已经访问过的链接
+			 a：hover 当用户鼠标放在链接上时
+			 a：active - 链接点击的那一刻*/
+			a:link{
+				color:blue;
+			}
+			a:visited{
+				color:deeppink;
+			}
+			a:hover{
+				color:green;
+			}
+			a:active{
+				color:red;
+			}
+			#tr2_id{
+				text-align: right;/*文本对齐方式*/
+			}
+		</style>
+	</head>
+	<body>
+		<!--表单-->
+		<form>
+			<table border="1">
+				<tr>
+					<td>用户名：</td>
+					<td><input type="text" /></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td id="tr2_id">密码：</td>
+					<td><input type="password" /></td>
+					<td></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

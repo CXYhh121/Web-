@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>CSS</title>
+		<!--样式标签-->
+		<style type="text/css">
+			/*CSS选择器*
+			 * 普通标签选择
+			 */
+			p{
+				/*CSS代码*/
+				color:green;
+				font-size:40px ;
+			}
+		</style>
+		
+		<!--link 标签：可以连接外部的CSS文件，而且可以连接多个CSS文件-->
+		<link type="text/css" rel="stylesheet" href="css/Cssstudy.css" />
+	</head>
+	<body>
+		<!--
+			什么是CSS：层叠样式表
+			CSS的实现方式
+			1.内联式:写在具体的html标签中
+				<p style="color: red;">HelloEveryBody</p>
+			2.嵌入式：写在head标签中的style标签里面
+			
+			3.外联式：外联式的CSS代码 不在HTML文件中
+				<link type="text/css" rel="stylesheet" href="css/Cssstudy.css" />
+			如果这三种CSS实现方式都控制着一个标签
+			他们的优先级是什么样的？内联 > 外联 > 嵌入
+		-->
+		<p style="color:red;">HelloEveryBody</p>
+		<p>HelloEveryBody</p>
+		<p>HelloEveryBody</p>
+		<p>HelloEveryBody</p>
+		<p>HelloEveryBody</p>
+		<p>HelloEveryBody</p>
+		<p>HelloEveryBody</p>
+		<p>HelloEveryBody</p>
+		<p>HelloEveryBody</p>
+		
+		<b>helloworld</b>
+		
+		
+	</body>
+</html>
