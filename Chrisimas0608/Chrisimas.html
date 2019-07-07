@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <style type="text/css">
+    	body,html{
+    		width: 100%;
+    		height: 100%;
+    		margin: 0;
+    	}
+    	#page1{
+    		width: 100%;
+    		height: 100%;
+    		background-image: url(img/s1.jpg);
+    		background-repeat:no-repeat ;
+    		background-size:cover ;
+    	}
+    	#page2{
+    		width: 100%;
+    		height: 100%;
+    		background-image: url(img/s2.jpg);
+    		background-repeat:no-repeat ;
+    		background-size:cover ;
+    	}
+    	#page3{
+    		width: 100%;
+    		height: 100%;
+    		background-repeat:no-repeat;
+    		background-size:cover ;
+    	}
+    	#welcome{
+    		width: 150px;
+    		height: 50px;
+    		position: absolute;
+    		left:110px;
+    		bottom: 105px;
+    	}
+    	#deer{
+    		width: 10%;
+    		height: 7%;
+    		position: absolute;
+    		left:165px;
+    		bottom: 165px;
+    		animation: deer 3s infinite;
+    	}
+    	@keyframes deer{
+    		0%{transform: rotate(20deg);}
+    		100%{transform: rotate(-20deg);}
+    	}
+    	#choujiang{
+    		position: absolute;
+    		width: 125px;
+    		height: 95px;
+    		left:120px;
+    		top:50px;
+    		animation: choujiang 2s infinite;
+    	}
+    	@keyframes choujiang{
+    		from{opacity: 0;}
+    		to{opacity: 1;}
+    	}
+    	#maozi{
+    		position: absolute;
+    		width: 60px;
+    		height: 50px;
+    		right: 90px;
+    		top:140px;
+    		animation: maozi 3s infinite;
+    	}
+    	@keyframes maozi{
+    		from{right: 90px;
+    		top:140px;}
+    		to{right: 50px;
+    		top:80px;}
+    	}
+    	#milu{
+    		position: absolute;
+    		width: 200px;
+    		height: 50px;
+    		left: 100px;
+    		top: 250px;
+    		animation: milu 3s infinite;
+    	}
+    	@keyframes milu{
+    		0%{transform: rotate(10deg);}
+    		100%{transform: rotate(0deg);}
+    	}
+    	#weijin{
+    		position: absolute;
+    		width: 40px;
+    		height: 50px;
+    		left: 80px;
+    		top:280px;
+    		animation: weijin 3s infinite;
+    	}
+    	@keyframes weijin{
+    		from{left: 80px;
+    		top:270px;}
+    		to{left: 40px;
+    		top: 350px;}
+    	}
+    	#shoutao{
+    		position: absolute;
+    		width: 30px;
+    		height: 40px;
+    		right: 60px;
+    		top:290px;
+    		animation: shoutao 2s infinite;
+    	}
+    	@keyframes shoutao{
+    		0%{transform: rotate(20deg);}
+    		100%{transform: rotate(-20deg);}
+    	}
+    	#wazi{
+    		position: absolute;
+    		width: 15px;
+    		height:20px;
+    		right: 120px;
+    		bottom:230px;
+    		animation: wazi 2s infinite;
+    	}
+    	@keyframes wazi{
+    		from{right: 140px;
+    		bottom:230px;
+    		width: 10px;
+    		height: 10px;}
+    		to{right: 140px;
+    		bottom:230px;
+    		width: 50px;
+    		height: 50px;}
+    	}
+    	#fanhui{
+    		width: 150px;
+    		height: 50px;
+    		position: absolute;
+    		left:110px;
+    		bottom: 105px;
+    	}
+    	#again{
+    		width: 150px;
+    		height: 50px;
+    		position: absolute;
+    		left:110px;
+    		bottom: 105px;
+    	}
+    </style>
+    <script type="text/javascript">
+    	function showpage(num){
+    		var div1=document.getElementById("page1");
+    		var div2=document.getElementById("page2");
+    		var div3=document.getElementById("page3");
+    		if(num == 1){
+    			div1.style.display="none";
+    			div2.style.display="block";
+    			div3.style.display="none";	
+    			
+    		}
+    		else if(num == 2){
+    			div1.style.display="block";
+    			div2.style.display="none";
+    			div3.style.display="none";	
+    			
+    		}
+    		else if(num == 3){
+    			div1.style.display="none";
+    			div2.style.display="none";
+    			div3.style.display="block";	
+    		}
+    	}
+   		
+   		function showpicture(num){
+   			showpage(3);
+   			var div3 = document.getElementById("page3");
+   			if(num == 1){
+   				div3.style.backgroundImage="url(img/lw1.jpg)";	
+   			}
+   			else if(num == 2){
+   				div3.style.backgroundImage="url(img/lw2.jpg)";
+   			}
+   			else if(num == 3){
+   				div3.style.backgroundImage="url(img/lw3.jpg)";
+   			}
+   			else if(num == 4){
+   				div3.style.backgroundImage="url(img/lw4.jpg)";
+   			}
+   		}
+    </script>
+</head>
+<body>
+	<audio src="audio/群星 - 铃儿响叮当.mp3" autoplay="autoplay" style="display: none;"></audio>
+	<div id="page1" style="display: block;">
+		<img id="welcome" src="img/a1.png" onclick="showpage(1)" />
+		<img id="deer" src="img/lu.png" />
+	</div>
+	
+	<div id="page2" style="display: none;">
+		<img id="choujiang" src="img/tu.png"/>
+		<img id="maozi" src="img/1.png" onclick="showpicture(1)"/>
+		<img id="weijin" src="img/2.png" onclick="showpicture(2)"/>
+		<img id="milu" src="img/174.png" />
+		<img id="shoutao" src="img/4.png" onclick="showpicture(3)" />
+		<img id="wazi" src="img/3.png" onclick="showpicture(4)" />
+		<img id="fanhui" src="img/a2.png" onclick="showpage(2)"/>
+	</div>
+	
+	<div id="page3" style="display: none;">
+		<img id="again" src="img/a.png" onclick="showpage(1)" />
+	</div>
+</body>
+</html>
