@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body,html{
+				width: 100%;
+				height: 100%;
+				margin: 0;
+			}
+			/*float与定位一样都会脱离浏览器文档流
+			 div3被浮动的div1覆盖之后，文本不会被覆盖*/
+			.top{
+				width:100%;
+				height: 10%;
+				background-color:orange;
+				float: left;
+			}
+			.location{
+				width: 20%;
+				height: 80%;
+				background-color: gold;
+				float: left;
+			}
+			.content{
+				width: 80%;
+				height: 80%;
+				background-color: gainsboro;
+				/*清除浮动
+				 clear:both;div3两侧都不允许有浮动
+				 clear属性必须要在本div上设置，不允许通过其他的div来控制本div
+				 比如：我们不能通过div2中的clear来去影响div3的布局*/
+				float: left;
+			}
+			.end{
+				width: 100%;
+				height: 10%;
+				background-color: orange;
+				float: left;
+			}
+			/*既不想div3被覆盖，又不想浮动*/
+			#top1{
+				font-family: "微软雅黑";
+				font-size: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="top">
+			<p id = "top1">Main Title of Web Page</p>
+		</div>
+		<div class="location">
+			<p>Menu</p>
+			<p>HTML</p>
+			<p>CSS</p>   
+			<p>JavaScript</p>
+		</div>
+		<div class="content">Content goes here</div>
+		<div class="end">
+			<p align="center">Copyright © W3CSchool.cc</p>
+		</div>
+	</body>
+</html>

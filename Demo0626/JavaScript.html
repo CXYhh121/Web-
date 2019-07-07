@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JavaScript</title>
+		<!--js语法 将js代码放在body标签的最后一列-->
+		<script type="text/javascript">
+			/*弹出一个对话框*/
+			/*alert("我的第一个JavaScript");*/
+			/*JavaScript会在页面加载时向HTML的<body>写文本*/
+			/*document.write("<h1>这是js写入的标签</h1>");*/
+			/*通过js向body中插入一张图片*/
+			/*document.write("<img src='img/背景图片.jpg' />");*/
+			
+			/*js函数 打开音乐*/
+		
+			function closemusic()
+			{
+				/*document.write("<input type='button' value='点我收起音乐' />");*/
+				/*获取音频控件*/
+				var audio1=document.getElementById("audio1");
+				/*添加此控件属性*/
+				audio1.setAttribute("hidden","hidden");
+				audio1.pause();
+			}
+			
+			/*关闭音频*/
+			function music()
+			{
+				var audio1=document.getElementById("audio1");
+				/*删除此控件属性*/
+				audio1.removeAttribute("hidden");
+				audio1.play();
+			}
+			
+			/*改变HTML标签中的文本值*/
+			/*function ChangText()
+			{
+				/*获取p标签控件*/
+				/*var p=document.getElementById("p");*/
+				/*p.innerHTML="我变了。。。。。";
+			}*/
+			function ChangPicture1()
+			{
+				/*获取p标签控件*/
+				var p=document.getElementById("image");
+				p.innerHTML="<img src='img/android.png' width='300px'/>";
+				/*p.setAttribute("src","img/android.png");*/
+			}
+			
+			function ChangPicture2()
+			{
+				/*获取p标签控件*/
+				var p=document.getElementById("image");
+				p.innerHTML="<img src='img/appstore.png' width='300px'/>";
+				/*p.setAttribute("src","img/appstore.png");*/
+			}
+			
+			/*window.onload=function 当你刷新网页是，就会触发此函数*/
+			window.onload=function sayhello(){
+				alert("hello");
+			}
+		</script>
+	</head>
+	<body>
+		<form>
+			<!--onclink 绑定一个js函数-->
+			<div>
+				<audio id="audio1"src='audio/cxy2.mp4' controls='controls' /></audio>
+			</div>
+			<div>
+				<input type="button" value="点我听音乐" onclick="music()"/>	
+				<input type='button' value='点我收起音乐' onclick="closemusic()"/>
+			</div>
+			
+			<!--<p id="p">我是一个普通的段落</p>-->
+			<div id="image">
+				<img src="img/appstore.png" style="width: 300px;" />	
+			</div>
+
+				<input  type="button" value="android" onclick="ChangPicture1()"/>
+				<input  type="button" value="appstore" onclick="ChangPicture2()"/>
+		
+			
+			
+		</form>
+		
+	</body>
+</html>

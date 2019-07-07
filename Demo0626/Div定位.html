@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/* div1{
+				border: 1px solid red;
+				background-color:blueviolet ;
+				width: 300px;
+				height: 300px;
+				
+				/*相对定位*/
+				/*他会脱离正常的文档流，悬浮在html的正上方
+				 注意：虽然脱离浏览器文档流，原来的位置依然保留*/
+				/*相对定位是参照其父类标签来移动的
+				 * 如果没有父类标签是参照浏览器移动的*/
+				/*position: relative;/*相对定位*/
+				/*left: 300px;
+				right: 300px;
+				
+				/*绝对定位*/
+				/*他会脱离正常的文档流，悬浮在html的正上方
+				 注意：脱离浏览器文档流，原来的位置不保留
+				 绝对定位是参照其父类标签而移动的
+				 父类所具备的条件：
+				 1.有position
+				 2.如果没有position属性，他就会参照父类外面的div
+				 如果最后没有找到一个带有position的div，他就参照浏览器进行定位*/
+				/*position: absolute;
+				/*position: fixed;/*固定定位*/
+			
+			body,html{
+				margin: 0;
+			}
+			.div1{
+				width: 300px;
+				height: 300px;
+				border: 1px solid red;
+				background-color: ;
+				/*position: relative;*/
+				position:absolute;
+				z-index:3;
+				left: 120px;
+			}
+			.div2{
+				width: 200px;
+				height: 200px;
+				border: 1px solid red;
+				position:absolute;
+				z-index:5;
+				background-color: blueviolet;
+			}
+			
+			/*.div3{
+				width: 300px;
+				height: 300px;
+				border: 1px solid red;
+				background-color: greenyellow;
+			}*/
+		</style>
+	</head>
+	<body>
+		<div class="div1">
+			<div class="div2">
+			</div>
+		</div>
+	</body>
+</html>

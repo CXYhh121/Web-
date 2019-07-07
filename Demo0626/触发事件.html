@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#in1{
+				position: absolute;
+				top: 20px;
+				left: 60px;
+			}
+			.img1{
+				width: 50px;
+			}
+			
+			#pa1{
+				position: absolute;
+				top: 90px;
+				left: 70px;
+			}
+			.img2{
+				position: absolute;
+				width: 50px;
+				top:70px;
+				left:10px;
+			}
+			
+			#p1{
+				position: absolute;
+				top: 120px;
+				left: 20px;
+			}
+		</style>
+		<script type="text/ecmascript">
+			function Text1(){
+				/*alert("事件触发了，用户离开文本框！");*/
+				
+				/*校验用户名是否符合规定*/
+				var in1=document.getElementById("in1");
+					if(in1.value.length>4){
+						alert("对不起，您的用户名长度为："+in1.value.length+"位，请重新输入");
+						
+						/*清空文本框*/
+						in1.value="";
+					}
+			}
+			function Text2()
+			{
+				/*alert("密码要求：不少于6个字符");*/
+				var p1=document.getElementById("p1");
+				p1.innerHTML="密码不能超过6位数";
+			}
+		</script>
+	</head>
+	<body>
+		<!--onblur 失去焦点时触发事件
+			当用户离开input输入框是执行一段JavaScript代码
+			
+			onfocus 得到焦点时触发事件
+			
+		-->
+		<form>
+			<img class="img1" src="img/用户名.png" /> <input id="in1" type="text" onblur="Text1()"/><br />
+			<img class="img2" src="img/密码.png" /> <input id="pa1" type="password" onfocus="Text2()"/><br />
+			<p id="p1" style="color: red;"></p>
+		</form>
+	</body>
+</html>
