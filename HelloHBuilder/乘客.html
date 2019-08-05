@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		body,html{
+			width:100%;
+			height:100%;
+			margin:0;
+		}
+		video{
+			width:100%;
+			/*height:400px;*/			
+		}	
+		#div1{
+			width:100%;
+			position: absolute;/*div的绝对定位*/
+			z-index: -99;/*设置div的堆叠顺序，数越小越靠后*/
+		}
+		table{
+			width:700px;
+			height:100px;
+		}
+	</style>
+	</head>
+	
+	<body>
+		<div id="div1">
+				<video src="img/cxy2.mp4" autoplay="autoplay" muted="muted" loop="loop"></video>
+		</div>
+		<form>
+			<table align="center">
+				<tr>
+					<td colspan="3" align="center">用户信息注册</td>
+				</tr>
+				<tr>
+					<td colspan="3">注：标有*处，均为必填项</td>
+				</tr>
+				<tr>
+					<td colspan="3">登录信息</td>
+				</tr>
+				<tr>
+					<td style="color: red;">*</td>
+					<td>用户名：</td>
+					<td><input type="text"></td>
+					<td>由字母、数字或下划线组成，不少于6位不多于30位</td>
+				</tr>
+				<tr>
+					<td style="color: red;">*</td>
+					<td>密码：</td>
+					<td><input type="password"></td>
+					<td>不少于6个字符</td>
+				</tr>
+				<tr>
+					<td style="color: red;">*</td>
+					<td>确认密码：</td>
+					<td><input type="password"></td>
+					<td>请再次输入密码</td>
+				</tr>
+				<tr>
+					<td colspan="3">详细信息：</td>
+				</tr>
+				<tr>
+					<td style="color: red;">*</td>
+					<td>真实姓名：</td>
+					<td><input type="text"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td style="color: red;">*</td>
+					<td>性别：</td>
+					<td><input type="radio" name="sex"/>男
+						<input type="radio" name="sex"/>女</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td style="color: red;">*</td>
+					<td>国家/地区：</td>
+					<td><select>
+						<option>请选择</option>
+						<option selected="selected">中国</option>
+						<option>美国</option>
+						<option>英国</option>
+						<option>澳大利亚</option>
+						<option>法国</option>
+						<option>意大利</option>	
+						<option>韩国</option>	
+						<option>俄罗斯</option>	
+						<option>西班牙</option>	
+						<option>匈牙利</option>	
+						<option>土耳其</option>	
+						<option>越南</option>	
+						<option>泰国</option>
+						<option>新加坡</option>	
+					</select>
+					<select>
+						<option>省份</option>
+						<option>江西</option>
+						<option>陕西</option>
+						<option>北京</option>
+						<option>河北</option>
+						<option>上海</option>	
+					</select>
+					<select>
+						<option>城市</option>
+						<option>上饶</option>
+						<option>九江</option>
+						<option>南昌</option>
+						<option>共青城</option>
+						<option>鹰潭</option>	
+					</select>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td style="color: red;">*</td>
+					<td>证件类型：</td>
+					<td>
+					<select>
+						<option>请选择</option>
+						<option>军官证</option>
+						<option>残疾人证</option>
+						<option>学生证</option>
+						<option selected="selected">二代身份证</option>	
+					</select></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td style="color: red;">*</td>
+					<td>证件号码：</td>
+					<td><input type="text"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td style="color: red;">*</td>
+					<td>出生日期：</td>
+					<td><input type="date"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>旅客类型：</td>
+					<td>
+					<select>
+						<option>儿童</option>>
+						<option>学生</option>>
+						<option>军官</option>>
+						<option>残疾人</option>>
+						<option selected="selected">成人</option>>	
+					</select></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td rowspan="3">备注：</td>
+					<td><textarea rows="10" cols="30"></textarea></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="radio"/>我已阅读并同意遵守</td>
+					<td><a href="https://www.baidu.com">《中国铁路客户服务中心网站服务条款》</a></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="button" value="注册"></td>
+					<td><input type="reset"></td>
+				</tr>
+			</table>			
+		<!--<fieldset style="width: 400px;">
+			<legend align="center">登录界面</legend>
+			用户名：<input type="text">由字母、数字或下划线组成，不少于6位不多于30位<br />
+			密码：    <input type="password">不少于6个字符<br />
+			确认密码：    <input type="password">请再次输入密码<br />
+			<input type="submit">
+			<input type="reset"><br />
+		</fieldset> -->
+		
+		<!--
+			<fieldset style="width: 400px;">
+			<legend align="center">乘客基本信息</legend>
+		姓名：<input type="text"><br />
+		性别：<input type="radio" name="sex"/>男
+			<input type="radio" name="sex"/>女  <br />
+		国家/地区：
+		<select>
+				<option>请选择</option>>	
+				<option selected="selected">中国</option>>
+				<option>美国</option>>
+				<option>英国</option>>
+				<option>澳大利亚</option>>
+				<option>法国</option>>
+				<option>意大利</option>>	
+				<option>韩国</option>>	
+				<option>俄罗斯</option>>	
+				<option>西班牙</option>>	
+				<option>匈牙利</option>>	
+				<option>土耳其</option>>	
+				<option>越南</option>>	
+				<option>泰国</option>>
+				<option>新加坡</option>>	
+		</select>
+		省份：
+		<select>
+			<option>江西</option>
+			<option>陕西</option>
+			<option>北京</option>
+			<option>河北</option>
+			<option>上海</option>	
+		</select>
+		城市：
+		<select>
+			<option>上饶</option>
+			<option>九江</option>
+			<option>南昌</option>
+			<option>共青城</option>
+			<option>鹰潭</option>	
+		</select><br />
+		证件类型：
+			<select>
+				<option>请选择</option>>
+				<option>军官证</option>>
+				<option>残疾人证</option>>
+				<option>学生证</option>>
+				<option selected="selected">二代身份证</option>>	
+			</select><br />
+		证件号码：<input type="text"><br />
+		出生日期：<input type="date"><br />
+		邮箱：<input type="email"><br />
+		电话：<input type="tel"><br />
+		地址：<input type="text"><br />
+		邮编：<input type="text"><br />
+		旅客类型：
+			<select>
+				<option>儿童</option>>
+				<option>学生</option>>
+				<option>军官</option>>
+				<option>残疾人</option>>
+				<option selected="selected">成人</option>>	
+			</select><br />
+			<input type="submit">
+			<input type="reset"><br />
+		</fieldset>
+		</form>-->
+		<!--<fieldset style="width: 400px;">
+			<legend align="center">添加乘车人信息</legend>
+		姓名：<input type="text"><br />
+		性别：<input type="radio" name="sex"/>男
+			<input type="radio" name="sex"/>女  <br />
+		证件号码：<input type="text"><br />
+		旅客类型：
+		<select>
+			<option>请选择</option>
+			<option>儿童</option>
+			<option>学生</option>
+			<option>军官</option>
+			<option>残疾人</option>
+			<option selected="selected">成人</option>	
+		</select>
+		</fieldset>-->
+	</body>
+</html>
